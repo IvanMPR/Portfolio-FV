@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+
+.active {
+  border-bottom: 0.5rem solid var(--color-primary) !important;
+}
+
+.sticky {
+  position: fixed;
+  padding: 1rem;
+  max-width: 120rem;
+  margin: auto;
+  top: 2rem;
+}
+
+.container {
+  padding: 1rem;
+  max-width: 120rem;
+  margin: auto;
+
+  @include respond(phone) {
+    & {
+      padding: 1rem 1.5rem;
+    }
+  }
+  @include respond(tab-p) {
+    & {
+      padding: 1rem 2rem;
+    }
+  }
+}
